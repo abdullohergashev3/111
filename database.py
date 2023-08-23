@@ -113,7 +113,7 @@ def login(username, password):
             where username=? and password=?
         """, (username, hash_password(password)))
     user_data2 = cur.fetchone()
-    if user _data2[-1]:
+    if user_data2[-1]:
         return 1
     else:
         return 2
@@ -244,7 +244,7 @@ def show_my_courses(username):
            """, (i[0],))
         name = cur.fetchone()
         my_course.append({"Kurs nomi": name[0], "Qo'shilgan vaqt": str(i[1])[:19]})
-    print(tabulate(my_course, headers='keys', tablefmt='fancy_grid'))
+        print(tabulate(my_course, headers='keys', tablefmt='fancy_grid'))
     return True
 
 
