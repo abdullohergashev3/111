@@ -75,6 +75,8 @@ def buy_product():
     for i in data3:
         if n <= i:
             d = True
+        else:
+            d = False
 
     if d:
         cur.execute("""
